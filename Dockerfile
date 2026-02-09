@@ -13,3 +13,6 @@ RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 
 # Render port fix aur bot start
 CMD gunicorn app:app --bind 0.0.0.0:$PORT --daemon && python3 main.py
+
+# Render wala PORT variable Hugging Face pe bhi kaam karega
+CMD gunicorn app:app --bind 0.0.0.0:7860 & python3 main.py
